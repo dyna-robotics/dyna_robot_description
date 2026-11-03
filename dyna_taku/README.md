@@ -14,11 +14,6 @@ two seven-joint arms and parallel grippers, with 31 actuators.
 Camera, lidar and IMU mounting frames are included.
 
 Open `scene.xml` in MuJoCo; `taku.xml` contains the robot model and `home` keyframe.
-Visual meshes are named after their links, with material suffixes where needed.
-Identical left/right finger meshes are shared.
-
-Collision geometry consists of a torso capsule and spheres at the wrists,
-elbows and wheels. Fingers have no collision geometry.
 
 ## License
 
