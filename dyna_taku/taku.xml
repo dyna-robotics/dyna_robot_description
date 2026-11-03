@@ -35,7 +35,7 @@
         <position forcerange="-3.6 3.6" kp="1" kv="0.1"/>
       </default>
       <default class="head_roll_joint">
-        <joint axis="1 0 0" range="-0.2617993878 0.2617993878" armature="0.0005418" frictionloss="0.04367"
+        <joint axis="1 0 0" range="-0.523 0.523" armature="0.0005418" frictionloss="0.04367"
           damping="0.001"/>
         <position forcerange="-3.6 3.6" kp="1" kv="0.1"/>
       </default>
@@ -844,7 +844,7 @@
     <position class="waist_yaw_joint" name="waist_yaw_joint" joint="waist_yaw_joint"/>
     <position class="head_yaw_joint" name="head_yaw_joint" joint="head_yaw_joint"/>
     <position class="head_roll_joint" name="head_roll_joint" joint="head_roll_joint"
-      ctrlrange="-0.2617993878 0.2617993878"/>
+      ctrlrange="-0.523 0.523"/>
     <position class="head_pitch_joint" name="head_pitch_joint" joint="head_pitch_joint"/>
     <position class="shoulder_pitch_joint" name="left_shoulder_pitch_joint" joint="left_shoulder_pitch_joint"/>
     <position class="left_shoulder_roll_joint" name="left_shoulder_roll_joint" joint="left_shoulder_roll_joint"/>
