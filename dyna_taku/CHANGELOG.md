@@ -2,6 +2,9 @@
 
 ## 2026-11-25
 
+- Remove internal head yaw/pitch collision geoms with no corresponding visuals;
+  retain the outer head collision and existing joint dynamics.
+
 - Split each gripper housing collision into two convex hulls for the angled
   front section and rear motor housing, preserving the recess between them.
 

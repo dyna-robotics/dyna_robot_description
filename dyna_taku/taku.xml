@@ -210,8 +210,6 @@
     <mesh name="torso_body_link_surface_5" file="meshes/torso_body_link_surface_5.obj" maxhullvert="64"/>
     <mesh name="torso_body_link_surface_6" file="meshes/torso_body_link_surface_6.obj" maxhullvert="64"/>
     <mesh name="torso_body_link_collision" file="collision/torso_body_link_collision.obj" maxhullvert="64"/>
-    <mesh name="head_yaw_link_collision" file="collision/head_yaw_link_collision.obj" maxhullvert="64"/>
-    <mesh name="head_pitch_link_collision" file="collision/head_pitch_link_collision.obj" maxhullvert="64"/>
     <mesh name="head_roll_link_surface_1" file="meshes/head_roll_link_surface_1.obj" maxhullvert="64"/>
     <mesh name="head_roll_link_surface_2" file="meshes/head_roll_link_surface_2.obj" maxhullvert="64"/>
     <mesh name="head_roll_link_surface_3" file="meshes/head_roll_link_surface_3.obj" maxhullvert="64"/>
@@ -452,11 +450,7 @@
                     <geom name="head_roll_link_collision_1" class="collision" type="mesh"
                       pos="0.0227563 -5.99682e-05 0.0337785" mesh="head_roll_link_collision"/>
                   </body>
-                  <geom name="head_pitch_link_collision_1" class="collision" type="mesh"
-                    pos="-0.017082 -0.001963 0.000698" mesh="head_pitch_link_collision"/>
                 </body>
-                <geom name="head_yaw_link_collision_1" class="collision" type="mesh" pos="-4.2e-05 0.000258 0.083657"
-                  mesh="head_yaw_link_collision"/>
               </body>
               <body name="right_shoulder_pitch_link" pos="0 -0.105 0.243">
                 <inertial pos="0.00333768 -0.0762098 0.000662013" mass="1.45458"
