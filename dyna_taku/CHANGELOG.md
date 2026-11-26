@@ -2,6 +2,9 @@
 
 ## 2026-11-25
 
+- Split each gripper housing collision into two convex hulls for the angled
+  front section and rear motor housing, preserving the recess between them.
+
 - Extract a standalone, side-neutral DynaClaw finger model and generate Taku's
   left/right instances without changing joint names or dynamics.
 - Replace 16 segmented collision meshes per finger with 10 geometries: native

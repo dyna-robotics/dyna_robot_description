@@ -259,7 +259,8 @@
     <mesh name="right_wrist_roll_link_surface_3" file="meshes/right_wrist_roll_link_surface_3.obj" maxhullvert="64"/>
     <mesh name="right_wrist_roll_link_surface_4" file="meshes/right_wrist_roll_link_surface_4.obj" maxhullvert="64"/>
     <mesh name="right_wrist_roll_link_surface_5" file="meshes/right_wrist_roll_link_surface_5.obj" maxhullvert="64"/>
-    <mesh name="right_wrist_roll_link_collision" file="collision/right_wrist_roll_link_collision.obj" maxhullvert="64"/>
+    <mesh name="right_housing_part_1" file="collision/gripper_housing/right_part_1.obj" maxhullvert="128"/>
+    <mesh name="right_housing_part_2" file="collision/gripper_housing/right_part_2.obj" maxhullvert="128"/>
     <mesh name="left_shoulder_pitch_link_surface_1" file="meshes/left_shoulder_pitch_link_surface_1.obj"
       maxhullvert="64"/>
     <mesh name="left_shoulder_pitch_link_surface_2" file="meshes/left_shoulder_pitch_link_surface_2.obj"
@@ -297,7 +298,8 @@
     <mesh name="left_wrist_roll_link_surface_2" file="meshes/left_wrist_roll_link_surface_2.obj" maxhullvert="64"/>
     <mesh name="left_wrist_roll_link_surface_3" file="meshes/left_wrist_roll_link_surface_3.obj" maxhullvert="64"/>
     <mesh name="left_wrist_roll_link_surface_4" file="meshes/left_wrist_roll_link_surface_4.obj" maxhullvert="64"/>
-    <mesh name="left_wrist_roll_link_collision" file="collision/left_wrist_roll_link_collision.obj" maxhullvert="64"/>
+    <mesh name="left_housing_part_1" file="collision/gripper_housing/left_part_1.obj" maxhullvert="128"/>
+    <mesh name="left_housing_part_2" file="collision/gripper_housing/left_part_2.obj" maxhullvert="128"/>
     <mesh name="torso_body_link_logo" file="meshes/torso_body_link_logo.obj"/>
   </asset>
   <worldbody>
@@ -513,8 +515,8 @@
                               mesh="right_wrist_roll_link_surface_4" material="photo_white"/>
                             <geom name="right_wrist_roll_link_visual_5" class="visual"
                               mesh="right_wrist_roll_link_surface_5" material="photo_gray"/>
-                            <geom name="right_wrist_roll_link_collision_1" class="collision" type="mesh"
-                              pos="-0.0050494 -0.000170931 -0.097341" mesh="right_wrist_roll_link_collision"/>
+                            <geom name="right_wrist_roll_link_collision_1" class="collision" type="mesh" mesh="right_housing_part_1"/>
+                            <geom name="right_wrist_roll_link_collision_2" class="collision" type="mesh" mesh="right_housing_part_2"/>
                           </body>
                           <geom name="right_wrist_pitch_link_visual_1" class="visual"
                             mesh="right_wrist_pitch_link_surface_1" material="photo_gray"/>
@@ -627,8 +629,8 @@
                               mesh="left_wrist_roll_link_surface_3" material="photo_white"/>
                             <geom name="left_wrist_roll_link_visual_4" class="visual"
                               mesh="left_wrist_roll_link_surface_4" material="photo_white"/>
-                            <geom name="left_wrist_roll_link_collision_1" class="collision" type="mesh"
-                              pos="-0.0050494 -0.000170931 -0.097341" mesh="left_wrist_roll_link_collision"/>
+                            <geom name="left_wrist_roll_link_collision_1" class="collision" type="mesh" mesh="left_housing_part_1"/>
+                            <geom name="left_wrist_roll_link_collision_2" class="collision" type="mesh" mesh="left_housing_part_2"/>
                           </body>
                           <geom name="left_wrist_pitch_link_visual_1" class="visual"
                             mesh="left_wrist_pitch_link_surface_1" material="photo_gray"/>
