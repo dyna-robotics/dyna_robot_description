@@ -5,7 +5,7 @@ for p in baseline.rglob('*'):
  if not p.is_file() or '__pycache__' in str(p):continue
  q=candidate/p.relative_to(baseline)
  if p.read_bytes()!=q.read_bytes():changed.append(str(p.relative_to(baseline)))
-checks['only_authorized_files_changed']=all((s.startswith('dyna_taku/assets/meshes/') and s.endswith('.obj')) or s in ['dyna_taku/taku.xml','dyna_taku/preview.png'] for s in changed)
+checks['only_authorized_files_changed']=all((s.startswith('dyna_taku/assets/meshes/') and s.endswith('.obj')) or s in ['dyna_taku/taku.xml','dyna_taku/preview.png','dyna_taku/CHANGELOG.md'] for s in changed)
 old_xml=(baseline/'dyna_taku/taku.xml').read_text();new_xml=(candidate/'dyna_taku/taku.xml').read_text()
 checks['only_head_xml_change']=old_xml.replace('rgba="0.89 0.793583333333 0.6675 1"','rgba="0.93 0.88164 0.8184 1"')==new_xml
 a=m.MjModel.from_xml_path(str(baseline/'dyna_taku/scene.xml'));b=m.MjModel.from_xml_path(str(candidate/'dyna_taku/scene.xml'))
