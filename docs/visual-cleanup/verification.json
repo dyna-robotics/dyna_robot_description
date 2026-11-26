@@ -1,0 +1,252 @@
+{
+  "checks": {
+    "only_authorized_files_changed": true,
+    "only_head_xml_change": true,
+    "body_mass": true,
+    "body_inertia": true,
+    "body_ipos": true,
+    "body_iquat": true,
+    "body_pos": true,
+    "body_quat": true,
+    "jnt_pos": true,
+    "jnt_axis": true,
+    "jnt_range": true,
+    "actuator_gainprm": true,
+    "actuator_biasprm": true,
+    "actuator_forcerange": true,
+    "actuator_ctrlrange": true,
+    "key_qpos": true,
+    "key_ctrl": true,
+    "all_other_colors_unchanged": true,
+    "head_color_expected": true,
+    "mat_specular": true,
+    "mat_shininess": true,
+    "geom_contype": true,
+    "geom_conaffinity": true,
+    "geom_friction": true,
+    "geom_solref": true,
+    "geom_solimp": true,
+    "collision_geom_pos": true,
+    "collision_geom_quat": true,
+    "collision_geom_size": true,
+    "collision_geom_type": true,
+    "original_faces_right_wrist_roll_link_surface_1": true,
+    "original_faces_folding_lower_joint_link_surface_2": true,
+    "original_faces_right_shoulder_roll_link_surface_1": true,
+    "original_faces_torso_body_link_surface_3": true,
+    "original_faces_left_wrist_roll_link_surface_3": true,
+    "original_faces_folding_to_waist_link_surface_1": true,
+    "original_faces_right_elbow_link_surface_1": true,
+    "original_faces_folding_lower_joint_link_surface_1": true,
+    "original_faces_left_wrist_roll_link_surface_2": true,
+    "original_faces_left_shoulder_roll_link_surface_1": true,
+    "original_faces_right_wrist_roll_link_surface_3": true,
+    "original_faces_right_wrist_roll_link_surface_2": true,
+    "original_faces_left_wrist_roll_link_surface_4": true,
+    "original_faces_torso_body_link_surface_2": true,
+    "original_faces_right_shoulder_pitch_link_surface_3": true,
+    "original_faces_left_elbow_link_surface_1": true,
+    "original_faces_left_shoulder_roll_link_surface_2": true,
+    "original_faces_left_wrist_roll_link_surface_1": true,
+    "original_faces_folding_to_waist_link_surface_2": true,
+    "original_faces_folding_to_waist_link_surface_4": true,
+    "original_faces_torso_body_link_surface_4": true,
+    "original_faces_agv_lower_skirt": true,
+    "original_faces_head_roll_link_surface_2": true,
+    "original_faces_right_shoulder_roll_link_surface_2": true,
+    "original_faces_left_shoulder_pitch_link_surface_3": true,
+    "original_faces_right_shoulder_pitch_link_surface_1": true,
+    "original_faces_head_roll_link_surface_1": true,
+    "original_faces_right_wrist_roll_link_surface_4": true,
+    "original_faces_left_shoulder_pitch_link_surface_2": true,
+    "original_faces_folding_to_waist_link_surface_3": true,
+    "one_second_state_identical": true,
+    "finite_state": true,
+    "no_mujoco_warnings": true
+  },
+  "changed_meshes": [
+    {
+      "mesh": "right_wrist_roll_link_surface_1",
+      "before": 6432,
+      "after": 6226,
+      "removed": 206
+    },
+    {
+      "mesh": "folding_lower_joint_link_surface_2",
+      "before": 14616,
+      "after": 14370,
+      "removed": 246
+    },
+    {
+      "mesh": "right_shoulder_roll_link_surface_1",
+      "before": 4128,
+      "after": 2108,
+      "removed": 2020
+    },
+    {
+      "mesh": "torso_body_link_surface_3",
+      "before": 60194,
+      "after": 23626,
+      "removed": 36568
+    },
+    {
+      "mesh": "left_wrist_roll_link_surface_3",
+      "before": 8632,
+      "after": 8593,
+      "removed": 39
+    },
+    {
+      "mesh": "folding_to_waist_link_surface_1",
+      "before": 3450,
+      "after": 3288,
+      "removed": 162
+    },
+    {
+      "mesh": "right_elbow_link_surface_1",
+      "before": 2342,
+      "after": 2270,
+      "removed": 72
+    },
+    {
+      "mesh": "folding_lower_joint_link_surface_1",
+      "before": 9460,
+      "after": 9322,
+      "removed": 138
+    },
+    {
+      "mesh": "left_wrist_roll_link_surface_2",
+      "before": 6756,
+      "after": 5366,
+      "removed": 1390
+    },
+    {
+      "mesh": "left_shoulder_roll_link_surface_1",
+      "before": 8256,
+      "after": 4232,
+      "removed": 4024
+    },
+    {
+      "mesh": "right_wrist_roll_link_surface_3",
+      "before": 8632,
+      "after": 8587,
+      "removed": 45
+    },
+    {
+      "mesh": "right_wrist_roll_link_surface_2",
+      "before": 6756,
+      "after": 5360,
+      "removed": 1396
+    },
+    {
+      "mesh": "left_wrist_roll_link_surface_4",
+      "before": 8518,
+      "after": 8299,
+      "removed": 219
+    },
+    {
+      "mesh": "torso_body_link_surface_2",
+      "before": 9582,
+      "after": 9540,
+      "removed": 42
+    },
+    {
+      "mesh": "right_shoulder_pitch_link_surface_3",
+      "before": 8318,
+      "after": 6539,
+      "removed": 1779
+    },
+    {
+      "mesh": "left_elbow_link_surface_1",
+      "before": 2342,
+      "after": 2275,
+      "removed": 67
+    },
+    {
+      "mesh": "left_shoulder_roll_link_surface_2",
+      "before": 7034,
+      "after": 4015,
+      "removed": 3019
+    },
+    {
+      "mesh": "left_wrist_roll_link_surface_1",
+      "before": 6432,
+      "after": 6226,
+      "removed": 206
+    },
+    {
+      "mesh": "folding_to_waist_link_surface_2",
+      "before": 22522,
+      "after": 22449,
+      "removed": 73
+    },
+    {
+      "mesh": "folding_to_waist_link_surface_4",
+      "before": 4584,
+      "after": 4159,
+      "removed": 425
+    },
+    {
+      "mesh": "torso_body_link_surface_4",
+      "before": 48274,
+      "after": 47687,
+      "removed": 587
+    },
+    {
+      "mesh": "agv_lower_skirt",
+      "before": 21831,
+      "after": 21828,
+      "removed": 3
+    },
+    {
+      "mesh": "head_roll_link_surface_2",
+      "before": 6154,
+      "after": 5949,
+      "removed": 205
+    },
+    {
+      "mesh": "right_shoulder_roll_link_surface_2",
+      "before": 7044,
+      "after": 4118,
+      "removed": 2926
+    },
+    {
+      "mesh": "left_shoulder_pitch_link_surface_3",
+      "before": 8400,
+      "after": 6997,
+      "removed": 1403
+    },
+    {
+      "mesh": "right_shoulder_pitch_link_surface_1",
+      "before": 6284,
+      "after": 5577,
+      "removed": 707
+    },
+    {
+      "mesh": "head_roll_link_surface_1",
+      "before": 10046,
+      "after": 9693,
+      "removed": 353
+    },
+    {
+      "mesh": "right_wrist_roll_link_surface_4",
+      "before": 8518,
+      "after": 8299,
+      "removed": 219
+    },
+    {
+      "mesh": "left_shoulder_pitch_link_surface_2",
+      "before": 6200,
+      "after": 5327,
+      "removed": 873
+    },
+    {
+      "mesh": "folding_to_waist_link_surface_3",
+      "before": 9492,
+      "after": 9489,
+      "removed": 3
+    }
+  ],
+  "removed_triangles": 59415,
+  "visual_bytes_before": 32332394,
+  "visual_bytes_after": 25514769
+}

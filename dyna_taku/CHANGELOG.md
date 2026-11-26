@@ -2,6 +2,9 @@
 
 ## [2026-11-26]
 
+- Simplify visual mesh internals while preserving exterior surfaces and color boundaries.
+- Lighten the head to HSB(34, 12, 93) and regenerate the preview at 2400 × 2400.
+
 - Model compliant, high-friction gripper pads separately from metal nails; reduce contact penetration and holding drift.
 - Add reproducible grasp validation and dynamic regression checks.
 - Refine soft-touch paint colors and AGV details; set the head to HSB(34, 25, 89).

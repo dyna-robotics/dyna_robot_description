@@ -130,7 +130,7 @@
     <!-- Low-gloss soft-touch paint approximation; gray RGB is 218, 218, 218. -->
     <material name="photo_white" rgba="1 1 1 1" specular="0.12" shininess="0.12"/>
     <material name="upper_arm_gray" rgba="0.65 0.65 0.65 1" specular="0.12" shininess="0.12"/>
-    <material name="head_warm" rgba="0.89 0.793583333333 0.6675 1" specular="0.12" shininess="0.12"/>
+    <material name="head_warm" rgba="0.93 0.88164 0.8184 1" specular="0.12" shininess="0.12"/>
     <material name="emergency_stop_red" rgba="0.8 0.015 0.015 1" specular="0.15" shininess="0.15"/>
     <material name="connector_silver" rgba="0.72 0.74 0.77 1" specular="0.8" shininess="0.65"/>
     <material name="photo_black" rgba="0.015 0.015 0.015 1" specular="0.25" shininess="0.25"/>
