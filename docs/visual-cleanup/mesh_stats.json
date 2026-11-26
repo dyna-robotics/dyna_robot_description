@@ -1,0 +1,12 @@
+{
+  "baseline": {
+    "obj_files": 101,
+    "triangles": 610873,
+    "bytes": 65501013
+  },
+  "candidate": {
+    "obj_files": 101,
+    "triangles": 551458,
+    "bytes": 58429451
+  }
+}
