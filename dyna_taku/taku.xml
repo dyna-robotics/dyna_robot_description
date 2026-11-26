@@ -1,6 +1,6 @@
 <mujoco model="dyna_taku">
   <compiler angle="radian" meshdir="assets" autolimits="true"/>
-  <option timestep="0.001" integrator="implicitfast">
+  <option timestep="0.001" integrator="implicitfast" cone="elliptic" impratio="10" tolerance="1e-10">
     <flag filterparent="enable"/>
   </option>
   <size njmax="500" nconmax="100" nuser_actuator="1"/>
@@ -127,17 +127,30 @@
   <asset>
     <include file="gripper/assets.xml"/>
     <texture name="chest" type="2d" file="assets/textures/chest_albedo.png"/>
-    <material name="photo_white" rgba="1 1 1 1" specular="0.3" shininess="0.35"/>
+    <!-- Low-gloss soft-touch paint approximation; gray RGB is 218, 218, 218. -->
+    <material name="photo_white" rgba="1 1 1 1" specular="0.12" shininess="0.12"/>
+    <material name="upper_arm_gray" rgba="0.65 0.65 0.65 1" specular="0.12" shininess="0.12"/>
+    <material name="head_warm" rgba="0.89 0.793583333333 0.6675 1" specular="0.12" shininess="0.12"/>
+    <material name="emergency_stop_red" rgba="0.8 0.015 0.015 1" specular="0.15" shininess="0.15"/>
+    <material name="connector_silver" rgba="0.72 0.74 0.77 1" specular="0.8" shininess="0.65"/>
     <material name="photo_black" rgba="0.015 0.015 0.015 1" specular="0.25" shininess="0.25"/>
-    <material name="photo_gray" rgba="0.65 0.65 0.65 1" specular="0.25" shininess="0.25"/>
+    <material name="photo_gray" rgba="0.8549019608 0.8549019608 0.8549019608 1" specular="0.12" shininess="0.12"/>
     <material name="photo_green" rgba="0.20 0.62 0.30 1" specular="0.25" shininess="0.25"/>
     <material name="chest_logo" texture="chest" rgba="1 1 1 1" specular=".3" shininess=".35"/>
+    <mesh name="agv_rear_buttons" file="meshes/agv_rear_buttons.obj"/>
+    <mesh name="agv_rear_connector" file="meshes/agv_rear_connector.obj"/>
+    <mesh name="agv_lower_skirt" file="meshes/agv_lower_skirt.obj"/>
+    <mesh name="agv_rear_lidar_cover" file="meshes/agv_rear_lidar_cover.obj"/>
+    <mesh name="agv_emergency_stop_cap" file="meshes/agv_emergency_stop_cap.obj"/>
     <mesh name="agv_base_link_surface_1" file="meshes/agv_base_link_surface_1.obj" maxhullvert="64"/>
     <mesh name="agv_base_link_surface_2" file="meshes/agv_base_link_surface_2.obj" maxhullvert="64"/>
     <mesh name="agv_base_link_surface_3" file="meshes/agv_base_link_surface_3.obj" maxhullvert="64"/>
     <mesh name="agv_base_link_surface_4" file="meshes/agv_base_link_surface_4.obj" maxhullvert="64"/>
     <mesh name="agv_base_link_surface_5" file="meshes/agv_base_link_surface_5.obj" maxhullvert="64"/>
-    <mesh name="agv_base_link_collision" file="collision/agv_base_link_collision.obj" maxhullvert="64"/>
+    <mesh name="agv_base_rear_collision" file="collision/agv_base_rear_collision.obj" maxhullvert="64"/>
+    <mesh name="agv_base_left_collision" file="collision/agv_base_left_collision.obj" maxhullvert="64"/>
+    <mesh name="agv_base_right_collision" file="collision/agv_base_right_collision.obj" maxhullvert="64"/>
+    <mesh name="agv_base_lidar_collision" file="collision/agv_base_lidar_collision.obj" maxhullvert="64"/>
     <mesh name="agv_right_back_steering_link_surface_1" file="meshes/agv_right_back_steering_link_surface_1.obj"
       maxhullvert="64"/>
     <mesh name="agv_right_back_steering_link_surface_2" file="meshes/agv_right_back_steering_link_surface_2.obj"
@@ -442,9 +455,9 @@
                         fovy="60" resolution="640 480"/>
                     </body>
                     <geom name="head_roll_link_visual_1" class="visual" mesh="head_roll_link_surface_1"
-                      material="photo_white"/>
+                      material="head_warm"/>
                     <geom name="head_roll_link_visual_2" class="visual" mesh="head_roll_link_surface_2"
-                      material="photo_white"/>
+                      material="head_warm"/>
                     <geom name="head_roll_link_visual_3" class="visual" mesh="head_roll_link_surface_3"
                       material="photo_black"/>
                     <geom name="head_roll_link_collision_1" class="collision" type="mesh"
@@ -542,9 +555,9 @@
                         pos="-0.00924702 -0.000855873 -0.0659457" mesh="right_elbow_link_collision"/>
                     </body>
                     <geom name="right_shoulder_yaw_link_visual_1" class="visual"
-                      mesh="right_shoulder_yaw_link_surface_1" material="photo_gray"/>
+                      mesh="right_shoulder_yaw_link_surface_1" material="upper_arm_gray"/>
                     <geom name="right_shoulder_yaw_link_visual_2" class="visual"
-                      mesh="right_shoulder_yaw_link_surface_2" material="photo_gray"/>
+                      mesh="right_shoulder_yaw_link_surface_2" material="photo_white"/>
                     <geom name="right_shoulder_yaw_link_visual_3" class="visual"
                       mesh="right_shoulder_yaw_link_surface_3" material="photo_gray"/>
                     <geom name="right_shoulder_yaw_link_visual_4" class="visual"
@@ -656,9 +669,9 @@
                         pos="-0.00943674 -0.000355444 -0.0659221" mesh="left_elbow_link_collision"/>
                     </body>
                     <geom name="left_shoulder_yaw_link_visual_1" class="visual" mesh="left_shoulder_yaw_link_surface_1"
-                      material="photo_gray"/>
+                      material="upper_arm_gray"/>
                     <geom name="left_shoulder_yaw_link_visual_2" class="visual" mesh="left_shoulder_yaw_link_surface_2"
-                      material="photo_gray"/>
+                      material="photo_white"/>
                     <geom name="left_shoulder_yaw_link_visual_3" class="visual" mesh="left_shoulder_yaw_link_surface_3"
                       material="photo_gray"/>
                     <geom name="left_shoulder_yaw_link_visual_4" class="visual" mesh="left_shoulder_yaw_link_surface_4"
@@ -683,7 +696,7 @@
                   pos="0.00330953 0.0761901 0.000289533" mesh="left_shoulder_pitch_link_collision"/>
               </body>
               <geom name="torso_body_link_visual_1" class="visual" mesh="torso_body_link_surface_1"
-                material="photo_black"/>
+                material="photo_white"/>
               <geom name="torso_body_link_visual_2" class="visual" mesh="torso_body_link_surface_2"
                 material="photo_gray"/>
               <geom name="torso_body_link_visual_3" class="visual" mesh="torso_body_link_surface_3"
@@ -728,13 +741,20 @@
         <geom name="folding_lower_joint_link_collision_1" class="collision" type="mesh"
           pos="0.0904125 -0.0422445 0.0653873" mesh="folding_lower_joint_link_collision"/>
       </body>
+      <geom name="agv_rear_buttons_visual" class="visual" mesh="agv_rear_buttons" material="photo_black"/>
+      <geom name="agv_rear_connector_visual" class="visual" mesh="agv_rear_connector" material="connector_silver"/>
+      <geom name="agv_lower_skirt_visual" class="visual" mesh="agv_lower_skirt" material="photo_gray"/>
+      <geom name="agv_rear_lidar_cover_visual" class="visual" mesh="agv_rear_lidar_cover" material="photo_black"/>
+      <geom name="agv_emergency_stop_cap_visual" class="visual" mesh="agv_emergency_stop_cap" material="emergency_stop_red"/>
       <geom name="agv_base_link_visual_1" class="visual" mesh="agv_base_link_surface_1" material="photo_black"/>
       <geom name="agv_base_link_visual_2" class="visual" mesh="agv_base_link_surface_2" material="photo_white"/>
       <geom name="agv_base_link_visual_3" class="visual" mesh="agv_base_link_surface_3" material="photo_gray"/>
-      <geom name="agv_base_link_visual_4" class="visual" mesh="agv_base_link_surface_4" material="photo_black"/>
+      <geom name="agv_base_link_visual_4" class="visual" mesh="agv_base_link_surface_4" material="photo_white"/>
       <geom name="agv_base_link_visual_5" class="visual" mesh="agv_base_link_surface_5" material="photo_white"/>
-      <geom name="agv_base_link_collision_1" class="collision" type="mesh" pos="-0.0139199 0.00323457 0.156937"
-        mesh="agv_base_link_collision"/>
+      <geom name="agv_base_rear_collision" class="collision" type="mesh" mesh="agv_base_rear_collision"/>
+      <geom name="agv_base_left_collision" class="collision" type="mesh" mesh="agv_base_left_collision"/>
+      <geom name="agv_base_right_collision" class="collision" type="mesh" mesh="agv_base_right_collision"/>
+      <geom name="agv_base_lidar_collision" class="collision" type="mesh" mesh="agv_base_lidar_collision"/>
     </body>
   </worldbody>
   <actuator>

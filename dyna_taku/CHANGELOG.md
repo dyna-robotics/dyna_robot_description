@@ -1,5 +1,13 @@
 # Changelog
 
+## [2026-11-26]
+
+- Model compliant, high-friction gripper pads separately from metal nails; reduce contact penetration and holding drift.
+- Add reproducible grasp validation and dynamic regression checks.
+- Refine soft-touch paint colors and AGV details; set the head to HSB(34, 25, 89).
+- Split the AGV collision shell into four hulls to preserve the central U-shaped clearance.
+- Update the preview with an upright greeting pose and balanced lighting.
+
 ## 2026-11-25
 
 - Remove internal head yaw/pitch collision geoms with no corresponding visuals;
