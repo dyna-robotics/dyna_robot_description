@@ -94,3 +94,15 @@ The inner-facing visual tip bevel is filled to the flat inner face. Rounded
 corners, the straight screw hole, and hard-edge normals are preserved.
 All collision geometry uses a shared display color; aluminum gray applies only
 to the nail visual.
+
+## Compliant pad contacts
+
+Green elastomer geoms use a compliant-contact approximation with provisional
+sliding friction 1.5; metal nails retain a separate, firmer contact law. This
+is not a deforming rubber mesh. Both standalone and Taku models use elliptic
+friction cones and `impratio=10` to reduce slow numerical slip. Geometry,
+mass/inertia, actuator gains and force limits are unchanged. Contact values
+need hardware calibration before interpreting loads quantitatively.
+
+See [validation results and changes](validation/VALIDATION_2026-11-26.md) and
+[reproduction instructions](validation/README.md).
