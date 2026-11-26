@@ -13,6 +13,12 @@ The robot has four steered wheels, four waist joints, three head joints,
 two seven-joint arms and parallel grippers, with 31 actuators.
 Camera, lidar and IMU mounting frames are included.
 
+All visual and collision meshes use OBJ format. Gripper collision geometry uses
+native boxes, tip capsules, and small convex meshes, independently of the visual meshes.
+
+The [standalone DynaClaw model](../dyna_claw/README.md) is the source for both
+grippers. Its generated files in `gripper/` are included by `taku.xml`.
+
 Open `scene.xml` in MuJoCo; `taku.xml` contains the robot model and `home` keyframe.
 
 ## License

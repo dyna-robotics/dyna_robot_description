@@ -1,0 +1,99 @@
+<mujoco model="dynaclaw">
+  <!--Side-neutral finger assembly. Mount at identity on a Taku wrist-roll frame.-->
+  <compiler angle="radian" meshdir="../assets" autolimits="true" />
+  <size nuser_actuator="1" />
+  <default>
+    <default class="dynaclaw">
+      <default class="dynaclaw_visual">
+        <geom type="mesh" contype="0" conaffinity="0" group="2" />
+      </default>
+      <default class="dynaclaw_collision">
+        <geom group="3" condim="4" />
+      </default>
+      <default class="dynaclaw_finger_joint">
+        <joint type="slide" armature="0.01358" frictionloss="0.2878" damping="0.01758" axis="0 1 0" />
+        <position forcerange="-15 15" kp="400" kv="20" user="0.044" />
+        <default class="dynaclaw_finger_joint_active">
+          <joint range="-0.0055 0.0345" />
+        </default>
+        <default class="dynaclaw_finger_joint_coupled">
+          <joint range="-0.0345 0.0055" />
+        </default>
+      </default>
+    </default>
+  </default>
+  <asset>
+    <material name="dynaclaw_green" rgba="0.20 0.62 0.30 1" specular="0.25" shininess="0.25" />
+    <material name="dynaclaw_black" rgba="0.015 0.015 0.015 1" specular="0.25" shininess="0.25" />
+    <material name="dynaclaw_aluminum" rgba="0.65 0.67 0.70 1" specular="0.8" shininess="0.7" />
+    <mesh name="dynaclaw_front_nail_visual" file="visual/front_nail.obj" />
+    <mesh name="dynaclaw_rear_nail_visual" file="visual/rear_nail.obj" />
+    <mesh name="dynaclaw_front_surface_1" file="visual/front_surface_1.obj" />
+    <mesh name="dynaclaw_front_surface_2" file="visual/front_surface_2.obj" />
+    <mesh name="dynaclaw_rear_surface_1" file="visual/rear_surface_1.obj" />
+    <mesh name="dynaclaw_rear_surface_2" file="visual/rear_surface_2.obj" />
+    <mesh name="dynaclaw_taper" file="collision/taper.obj" maxhullvert="64" />
+    <mesh name="dynaclaw_relief_1" file="collision/relief_1.obj" maxhullvert="64" />
+    <mesh name="dynaclaw_relief_2" file="collision/relief_2.obj" maxhullvert="64" />
+    <mesh name="dynaclaw_relief_3" file="collision/relief_3.obj" maxhullvert="64" />
+    <mesh name="dynaclaw_relief_4" file="collision/relief_4.obj" maxhullvert="64" />
+    <mesh name="dynaclaw_tip_support" file="collision/tip_support.obj" maxhullvert="64" />
+  </asset>
+  <!-- Geoms and tip frames offset outward 0.595308174533 mm per finger: q=0 is nail tangency. -->
+  <worldbody>
+    <body name="dynaclaw" childclass="dynaclaw">
+      <body name="gripper_front_link" pos="-0.028953 -0.023048 -0.166971" childclass="dynaclaw">
+        <inertial pos="0 0 0" mass="0.0850961" fullinertia="7.58005e-05 7.25109e-05 1.66604e-05 2.53038e-07 9.59111e-07 7.99867e-06" />
+        <joint name="gripper_front_joint" pos="0 0 0" axis="0 1 0" type="slide" class="dynaclaw_finger_joint_coupled" />
+        <body name="gripper_front_tip_frame" pos="0.00043300000000000001 0.022472691825467003 -0.080556000000000003">
+          <inertial pos="0 0 0" mass="1e-9" diaginertia="0 0 0" />
+        </body>
+        <geom name="gripper_front_link_visual_1" class="dynaclaw_visual" mesh="dynaclaw_front_surface_1" material="dynaclaw_green" pos="0 -0.00059530817453299961 0" />
+        <geom name="gripper_front_link_visual_2" class="dynaclaw_visual" mesh="dynaclaw_front_surface_2" material="dynaclaw_black" pos="0 -0.00059530817453299961 0" />
+        <geom name="gripper_front_nail_visual" class="dynaclaw_visual" mesh="dynaclaw_front_nail_visual" material="dynaclaw_aluminum" pos="0 -0.00059530817453299961 0" />
+        <!--Boxes provide continuous planar tip contacts; small convex pieces retain relief; a box and transverse tip capsule approximate the nail.-->
+        <geom name="gripper_front_collision_inner_pad" class="dynaclaw_collision" type="box" pos="0.00043281 0.020071601358767 -0.066191440168499996" size="0.006 0.0009 0.00903636388117" quat="0.999048221582 0.0436193873653 0 0" />
+        <geom name="gripper_front_collision_outer_back" class="dynaclaw_collision" type="box" pos="0.00043281 0.0024538240535270004 -0.046882851938" size="0.006 0.0004 0.00484957129392" quat="0.258819045103 -0.965925826289 0 0" />
+        <geom name="gripper_front_collision_taper" class="dynaclaw_collision" type="mesh" mesh="dynaclaw_taper" pos="0 -0.00059530817453299961 0" />
+        <geom name="gripper_front_collision_relief_1" class="dynaclaw_collision" type="mesh" mesh="dynaclaw_relief_1" pos="0 -0.00059530817453299961 0" />
+        <geom name="gripper_front_collision_relief_2" class="dynaclaw_collision" type="mesh" mesh="dynaclaw_relief_2" pos="0 -0.00059530817453299961 0" />
+        <geom name="gripper_front_collision_relief_3" class="dynaclaw_collision" type="mesh" mesh="dynaclaw_relief_3" pos="0 -0.00059530817453299961 0" />
+        <geom name="gripper_front_collision_relief_4" class="dynaclaw_collision" type="mesh" mesh="dynaclaw_relief_4" pos="0 -0.00059530817453299961 0" />
+        <geom name="gripper_front_collision_tip_support" class="dynaclaw_collision" type="mesh" mesh="dynaclaw_tip_support" pos="0 -0.00059530817453299961 0" />
+        <geom name="gripper_front_collision_nail" class="dynaclaw_collision" type="box" pos="0.000432810746 0.013723793929766999 -0.065218504094100002" size="0.006000000052 0.000992002455033 0.0166644072284" quat="0.965925826289 0.258819045103 0 0" />
+        <geom name="gripper_front_collision_nail_tip" class="dynaclaw_collision" type="capsule" fromto="-0.0045751868509700004 0.022055997543967001 -0.079650304092899998 0.0054408083429699997 0.022055997543967001 -0.079650304092899998" size="0.000992002455033" />
+      </body>
+      <body name="gripper_rear_link" pos="-0.028088 0.023048 -0.166971" childclass="dynaclaw">
+        <inertial pos="0 0 0" mass="0.0850961" fullinertia="7.58005e-05 7.25109e-05 1.66604e-05 2.53038e-07 -9.59111e-07 -7.99867e-06" />
+        <joint name="gripper_rear_joint" pos="0 0 0" axis="0 1 0" type="slide" class="dynaclaw_finger_joint_active" />
+        <body name="gripper_rear_tip_frame" pos="-0.00043199999999999998 -0.022472691825467003 -0.080556000000000003">
+          <inertial pos="0 0 0" mass="1e-9" diaginertia="0 0 0" />
+        </body>
+        <geom name="gripper_rear_link_visual_1" class="dynaclaw_visual" mesh="dynaclaw_rear_surface_1" material="dynaclaw_green" pos="0 0.00059530817453299961 0" />
+        <geom name="gripper_rear_link_visual_2" class="dynaclaw_visual" mesh="dynaclaw_rear_surface_2" material="dynaclaw_black" pos="0 0.00059530817453299961 0" />
+        <geom name="gripper_rear_nail_visual" class="dynaclaw_visual" mesh="dynaclaw_rear_nail_visual" material="dynaclaw_aluminum" pos="0 0.00059530817453299961 0" />
+        <!--Boxes provide continuous planar tip contacts; small convex pieces retain relief; a box and transverse tip capsule approximate the nail.-->
+        <geom name="gripper_rear_collision_inner_pad" class="dynaclaw_collision" type="box" pos="-0.00043281 -0.020071601358767 -0.066191440168499996" size="0.006 0.0009 0.00903636388117" quat="0 0 0.0436193873653 0.999048221582" />
+        <geom name="gripper_rear_collision_outer_back" class="dynaclaw_collision" type="box" pos="-0.00043281 -0.0024538240535270004 -0.046882851938" size="0.006 0.0004 0.00484957129392" quat="0 0 -0.965925826289 0.258819045103" />
+        <geom name="gripper_rear_collision_taper" class="dynaclaw_collision" type="mesh" mesh="dynaclaw_taper" quat="0 0 0 1" pos="0 0.00059530817453299961 0" />
+        <geom name="gripper_rear_collision_relief_1" class="dynaclaw_collision" type="mesh" mesh="dynaclaw_relief_1" quat="0 0 0 1" pos="0 0.00059530817453299961 0" />
+        <geom name="gripper_rear_collision_relief_2" class="dynaclaw_collision" type="mesh" mesh="dynaclaw_relief_2" quat="0 0 0 1" pos="0 0.00059530817453299961 0" />
+        <geom name="gripper_rear_collision_relief_3" class="dynaclaw_collision" type="mesh" mesh="dynaclaw_relief_3" quat="0 0 0 1" pos="0 0.00059530817453299961 0" />
+        <geom name="gripper_rear_collision_relief_4" class="dynaclaw_collision" type="mesh" mesh="dynaclaw_relief_4" quat="0 0 0 1" pos="0 0.00059530817453299961 0" />
+        <geom name="gripper_rear_collision_tip_support" class="dynaclaw_collision" type="mesh" mesh="dynaclaw_tip_support" quat="0 0 0 1" pos="0 0.00059530817453299961 0" />
+        <geom name="gripper_rear_collision_nail" class="dynaclaw_collision" type="box" pos="-0.000432810746 -0.013723793929766999 -0.065218504094100002" size="0.006000000052 0.000992002455033 0.0166644072284" quat="5.91458985689e-17 1.58480957572e-17 0.258819045103 0.965925826289" />
+        <geom name="gripper_rear_collision_nail_tip" class="dynaclaw_collision" type="capsule" fromto="0.0045751868509700004 -0.022055997543967001 -0.079650304092899998 -0.0054408083429699997 -0.022055997543967001 -0.079650304092899998" size="0.000992002455033" />
+      </body>
+    </body>
+  </worldbody>
+  <equality>
+    <joint joint1="gripper_front_joint" joint2="gripper_rear_joint" polycoef="0 -1 0 0 0" />
+  </equality>
+  <actuator>
+    <position class="dynaclaw_finger_joint_active" name="gripper_joint" joint="gripper_rear_joint" />
+  </actuator>
+  <keyframe>
+    <key name="home" qpos="0 0" ctrl="0" />
+    <key name="open" qpos="-0.02 0.02" ctrl="0.02" />
+  </keyframe>
+</mujoco>

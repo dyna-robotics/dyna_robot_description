@@ -1,0 +1,7 @@
+{
+  "description": "Approved straight 12-sided hole and hard-edge normals retained; inner tip bevel filled per user correction. Do not update without explicit visual-change approval.",
+  "files": {
+    "assets/visual/front_nail.obj": "d376e73deaa9765103ad617a873d64d337a90897f3a905f2221356849c64a09b",
+    "assets/visual/rear_nail.obj": "c520cc3bdf0b23cada0fc6646b3eccd23283b82c1e1fcaa5f1390a1480694ace"
+  }
+}

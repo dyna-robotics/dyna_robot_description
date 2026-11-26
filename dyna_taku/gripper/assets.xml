@@ -1,0 +1,18 @@
+<mujocoinclude>
+  <!-- Generated from dyna_claw/models/dynaclaw.xml; run dyna_claw/generate_taku_includes.py after edits. -->
+  <material name="dynaclaw_green" rgba="0.20 0.62 0.30 1" specular="0.25" shininess="0.25" />
+  <material name="dynaclaw_black" rgba="0.015 0.015 0.015 1" specular="0.25" shininess="0.25" />
+  <material name="dynaclaw_aluminum" rgba="0.65 0.67 0.70 1" specular="0.8" shininess="0.7" />
+  <mesh name="dynaclaw_front_nail_visual" file="../../dyna_claw/assets/visual/front_nail.obj" />
+  <mesh name="dynaclaw_rear_nail_visual" file="../../dyna_claw/assets/visual/rear_nail.obj" />
+  <mesh name="dynaclaw_front_surface_1" file="../../dyna_claw/assets/visual/front_surface_1.obj" />
+  <mesh name="dynaclaw_front_surface_2" file="../../dyna_claw/assets/visual/front_surface_2.obj" />
+  <mesh name="dynaclaw_rear_surface_1" file="../../dyna_claw/assets/visual/rear_surface_1.obj" />
+  <mesh name="dynaclaw_rear_surface_2" file="../../dyna_claw/assets/visual/rear_surface_2.obj" />
+  <mesh name="dynaclaw_taper" file="../../dyna_claw/assets/collision/taper.obj" maxhullvert="64" />
+  <mesh name="dynaclaw_relief_1" file="../../dyna_claw/assets/collision/relief_1.obj" maxhullvert="64" />
+  <mesh name="dynaclaw_relief_2" file="../../dyna_claw/assets/collision/relief_2.obj" maxhullvert="64" />
+  <mesh name="dynaclaw_relief_3" file="../../dyna_claw/assets/collision/relief_3.obj" maxhullvert="64" />
+  <mesh name="dynaclaw_relief_4" file="../../dyna_claw/assets/collision/relief_4.obj" maxhullvert="64" />
+  <mesh name="dynaclaw_tip_support" file="../../dyna_claw/assets/collision/tip_support.obj" maxhullvert="64" />
+</mujocoinclude>

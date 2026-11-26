@@ -1,0 +1,21 @@
+<mujocoinclude>
+  <!-- Generated from dyna_claw/models/dynaclaw.xml; run dyna_claw/generate_taku_includes.py after edits. -->
+  <default class="dynaclaw">
+    <default class="dynaclaw_visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="2" />
+    </default>
+    <default class="dynaclaw_collision">
+      <geom group="3" condim="4" />
+    </default>
+    <default class="dynaclaw_finger_joint">
+      <joint type="slide" armature="0.01358" frictionloss="0.2878" damping="0.01758" axis="0 1 0" />
+      <position forcerange="-15 15" kp="400" kv="20" user="0.044" />
+      <default class="dynaclaw_finger_joint_active">
+        <joint range="-0.0055 0.0345" />
+      </default>
+      <default class="dynaclaw_finger_joint_coupled">
+        <joint range="-0.0345 0.0055" />
+      </default>
+    </default>
+  </default>
+</mujocoinclude>

@@ -1,0 +1,5 @@
+<mujocoinclude>
+  <!-- Generated from dyna_claw/models/dynaclaw.xml; run dyna_claw/generate_taku_includes.py after edits. -->
+  <joint joint1="left_gripper_front_joint" joint2="left_gripper_rear_joint" polycoef="0 -1 0 0 0" />
+  <joint joint1="right_gripper_front_joint" joint2="right_gripper_rear_joint" polycoef="0 -1 0 0 0" />
+</mujocoinclude>

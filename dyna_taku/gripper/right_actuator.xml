@@ -1,0 +1,4 @@
+<mujocoinclude>
+  <!-- Generated from dyna_claw/models/dynaclaw.xml; run dyna_claw/generate_taku_includes.py after edits. -->
+  <position class="dynaclaw_finger_joint_active" name="right_gripper_joint" joint="right_gripper_rear_joint" />
+</mujocoinclude>

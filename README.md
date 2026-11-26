@@ -10,6 +10,9 @@ simplified collision geometry and a home keyframe.
 
 ![Taku](dyna_taku/preview.png)
 
+The [DynaClaw finger assembly](dyna_claw/README.md) can also be viewed and edited
+independently; Taku includes generated left/right instances of that model.
+
 Open `dyna_taku/scene.xml` in MuJoCo:
 
 ```bash
