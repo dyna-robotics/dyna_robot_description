@@ -1,0 +1,301 @@
+{
+  "mujoco_version": "3.12.0",
+  "directions": 1030,
+  "colliders": [
+    {
+      "geom": "agv_base_rear_collision",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 0.0006753865292030703
+    },
+    {
+      "geom": "agv_base_left_collision",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 0.0005836756599153503
+    },
+    {
+      "geom": "agv_base_right_collision",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 0.0005812819744710485
+    },
+    {
+      "geom": "agv_base_lidar_collision",
+      "source_hull_vertices": 27,
+      "imported_vertices": 27,
+      "max_support_error_mm": 0.0003278434486109205
+    },
+    {
+      "geom": "folding_lower_joint_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 0.0005772625315814128
+    },
+    {
+      "geom": "folding_to_waist_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 0.0005957371496112529
+    },
+    {
+      "geom": "torso_waist_pitch_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 0.0004284101363660753
+    },
+    {
+      "geom": "torso_body_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 0.000559826531021379
+    },
+    {
+      "geom": "head_roll_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 0.00043870335930673576
+    },
+    {
+      "geom": "right_shoulder_pitch_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 5.9915322259129766e-05
+    },
+    {
+      "geom": "right_shoulder_roll_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 0.00041108006287871035
+    },
+    {
+      "geom": "right_shoulder_yaw_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 0.00019496629310999936
+    },
+    {
+      "geom": "right_elbow_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 0.0003743620343721332
+    },
+    {
+      "geom": "right_wrist_yaw_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 0.00040555350988569216
+    },
+    {
+      "geom": "right_wrist_pitch_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 6.303140920316253e-05
+    },
+    {
+      "geom": "right_wrist_roll_link_collision_1",
+      "source_hull_vertices": 128,
+      "imported_vertices": 128,
+      "max_support_error_mm": 0.00048821239459484467
+    },
+    {
+      "geom": "right_wrist_roll_link_collision_2",
+      "source_hull_vertices": 128,
+      "imported_vertices": 128,
+      "max_support_error_mm": 0.0004925924680376781
+    },
+    {
+      "geom": "right_gripper_front_collision_taper",
+      "source_hull_vertices": 12,
+      "imported_vertices": 12,
+      "max_support_error_mm": 3.526772041073656e-05
+    },
+    {
+      "geom": "right_gripper_front_collision_relief_1",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 2.976488472361538e-05
+    },
+    {
+      "geom": "right_gripper_front_collision_relief_2",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 4.906984317487595e-05
+    },
+    {
+      "geom": "right_gripper_front_collision_relief_3",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 6.857279069572009e-05
+    },
+    {
+      "geom": "right_gripper_front_collision_relief_4",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 4.233704875566957e-05
+    },
+    {
+      "geom": "right_gripper_front_collision_tip_support",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 4.295660708392157e-05
+    },
+    {
+      "geom": "right_gripper_rear_collision_taper",
+      "source_hull_vertices": 12,
+      "imported_vertices": 12,
+      "max_support_error_mm": 3.528042388789565e-05
+    },
+    {
+      "geom": "right_gripper_rear_collision_relief_1",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 2.9829902659095353e-05
+    },
+    {
+      "geom": "right_gripper_rear_collision_relief_2",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 4.906389400316513e-05
+    },
+    {
+      "geom": "right_gripper_rear_collision_relief_3",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 6.847343048121957e-05
+    },
+    {
+      "geom": "right_gripper_rear_collision_relief_4",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 4.2285589862967043e-05
+    },
+    {
+      "geom": "right_gripper_rear_collision_tip_support",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 4.2609054839992666e-05
+    },
+    {
+      "geom": "left_shoulder_pitch_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 6.067731657399822e-05
+    },
+    {
+      "geom": "left_shoulder_roll_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 0.00047735343478017
+    },
+    {
+      "geom": "left_shoulder_yaw_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 0.00011364839946903516
+    },
+    {
+      "geom": "left_elbow_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 0.00043889166845278993
+    },
+    {
+      "geom": "left_wrist_yaw_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 0.000410456959198946
+    },
+    {
+      "geom": "left_wrist_pitch_link_collision_1",
+      "source_hull_vertices": 64,
+      "imported_vertices": 64,
+      "max_support_error_mm": 6.127116936038846e-05
+    },
+    {
+      "geom": "left_wrist_roll_link_collision_1",
+      "source_hull_vertices": 128,
+      "imported_vertices": 128,
+      "max_support_error_mm": 0.00048130998475670594
+    },
+    {
+      "geom": "left_wrist_roll_link_collision_2",
+      "source_hull_vertices": 128,
+      "imported_vertices": 128,
+      "max_support_error_mm": 0.0004909031691147092
+    },
+    {
+      "geom": "left_gripper_front_collision_taper",
+      "source_hull_vertices": 12,
+      "imported_vertices": 12,
+      "max_support_error_mm": 3.526772041073656e-05
+    },
+    {
+      "geom": "left_gripper_front_collision_relief_1",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 2.976488472361538e-05
+    },
+    {
+      "geom": "left_gripper_front_collision_relief_2",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 4.906984318875374e-05
+    },
+    {
+      "geom": "left_gripper_front_collision_relief_3",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 6.857279072347566e-05
+    },
+    {
+      "geom": "left_gripper_front_collision_relief_4",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 4.233704870015842e-05
+    },
+    {
+      "geom": "left_gripper_front_collision_tip_support",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 4.29566070492271e-05
+    },
+    {
+      "geom": "left_gripper_rear_collision_taper",
+      "source_hull_vertices": 12,
+      "imported_vertices": 12,
+      "max_support_error_mm": 3.528042391565123e-05
+    },
+    {
+      "geom": "left_gripper_rear_collision_relief_1",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 2.9829902659095353e-05
+    },
+    {
+      "geom": "left_gripper_rear_collision_relief_2",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 4.906389401704292e-05
+    },
+    {
+      "geom": "left_gripper_rear_collision_relief_3",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 6.84734304395862e-05
+    },
+    {
+      "geom": "left_gripper_rear_collision_relief_4",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 4.2285589862967043e-05
+    },
+    {
+      "geom": "left_gripper_rear_collision_tip_support",
+      "source_hull_vertices": 8,
+      "imported_vertices": 8,
+      "max_support_error_mm": 4.260905486080935e-05
+    }
+  ],
+  "max_support_error_mm": 0.0006753865292030703
+}

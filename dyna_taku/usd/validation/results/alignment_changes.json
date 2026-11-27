@@ -1,0 +1,70 @@
+{
+  "environment": {
+    "isaacsim": "6.2.0.0",
+    "newton": "1.6.1",
+    "mujoco": "3.12.0",
+    "mujoco-warp": "3.12.0",
+    "warp-lang": "1.19.0"
+  },
+  "whole_robot_before_compiled_hull_overlay": {
+    "dt": 0.0005,
+    "duration_seconds": 2,
+    "body_names": [
+      "agv_base_link",
+      "torso_body_link",
+      "left_wrist_roll_link",
+      "right_wrist_roll_link"
+    ],
+    "max_body_position_difference_vs_cpu_mm": [
+      0.08859553960439959,
+      0.9889976744736997,
+      7.488278849951251,
+      1.574043778373825
+    ],
+    "max_body_position_difference_vs_warp_mm": [
+      0.08855265009439163,
+      0.9890612903766204,
+      7.48741478258119,
+      1.5743240148705058
+    ]
+  },
+  "whole_robot_after_compiled_hull_overlay": {
+    "duration_seconds": 2,
+    "initial_body_position_error_mm": [
+      0.0,
+      6.248548573857836e-05,
+      3.54673544504405e-05,
+      3.690285836322163e-05
+    ],
+    "versions": {
+      "isaacsim": "6.2.0.0",
+      "newton": "1.6.1",
+      "mujoco": "3.12.0",
+      "mujoco-warp": "3.12.0",
+      "warp-lang": "1.19.0"
+    },
+    "dt": 0.0005,
+    "finite": true,
+    "body_names": [
+      "agv_base_link",
+      "torso_body_link",
+      "left_wrist_roll_link",
+      "right_wrist_roll_link"
+    ],
+    "max_body_position_difference_vs_cpu_mm": [
+      3.2017595150961874e-05,
+      0.00045707420748567255,
+      0.0017055494102752736,
+      0.0005419868884022269
+    ],
+    "max_body_position_difference_vs_warp_mm": [
+      1.0111946476898519e-05,
+      0.000300537771890813,
+      0.0008386898059065619,
+      0.0004199045602133938
+    ],
+    "warnings_cpu": 0,
+    "scope": "small simultaneous upper-body actuation from home; not a joint-limit sweep or full-robot grasp"
+  },
+  "change": "Use original MuJoCo compiled hull support vertices in USD; preserve visuals, masses, inertias and gains."
+}

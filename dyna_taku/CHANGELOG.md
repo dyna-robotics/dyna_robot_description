@@ -1,5 +1,9 @@
 # Changelog
 
+## [2026-11-27]
+
+- Add Taku USD for Isaac Newton / MuJoCo Warp, with rendering and dynamics validation.
+
 ## [2026-11-26]
 
 - Simplify visual mesh internals while preserving exterior surfaces and color boundaries.

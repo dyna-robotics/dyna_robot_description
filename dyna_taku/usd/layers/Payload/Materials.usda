@@ -1,0 +1,997 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "MuJoCo USD Converter v0.10.0"
+    }
+    defaultPrim = "tn__dynaTakuscene_nD9"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "tn__dynaTakuscene_nD9" (
+    displayName = "dyna Taku scene"
+    uiHints = {
+        string displayName = "dyna Taku scene"
+    }
+)
+{
+    def Scope "Materials"
+    {
+        def Material "floor" (
+            prepend references = @./MaterialsLibrary.usdc@</Materials/floor>
+        )
+        {
+        }
+
+        def Material "photo_black" (
+            prepend references = @./MaterialsLibrary.usdc@</Materials/photo_black>
+        )
+        {
+        }
+
+        def Material "connector_silver" (
+            prepend references = @./MaterialsLibrary.usdc@</Materials/connector_silver>
+        )
+        {
+        }
+
+        def Material "photo_gray" (
+            prepend references = @./MaterialsLibrary.usdc@</Materials/photo_gray>
+        )
+        {
+        }
+
+        def Material "emergency_stop_red" (
+            prepend references = @./MaterialsLibrary.usdc@</Materials/emergency_stop_red>
+        )
+        {
+        }
+
+        def Material "photo_white" (
+            prepend references = @./MaterialsLibrary.usdc@</Materials/photo_white>
+        )
+        {
+        }
+
+        def Material "chest_logo" (
+            prepend references = @./MaterialsLibrary.usdc@</Materials/chest_logo>
+        )
+        {
+        }
+
+        def Material "head_warm" (
+            prepend references = @./MaterialsLibrary.usdc@</Materials/head_warm>
+        )
+        {
+        }
+
+        def Material "upper_arm_gray" (
+            prepend references = @./MaterialsLibrary.usdc@</Materials/upper_arm_gray>
+        )
+        {
+        }
+
+        def Material "dynaclaw_green" (
+            prepend references = @./MaterialsLibrary.usdc@</Materials/dynaclaw_green>
+        )
+        {
+        }
+
+        def Material "dynaclaw_black" (
+            prepend references = @./MaterialsLibrary.usdc@</Materials/dynaclaw_black>
+        )
+        {
+        }
+
+        def Material "dynaclaw_aluminum" (
+            prepend references = @./MaterialsLibrary.usdc@</Materials/dynaclaw_aluminum>
+        )
+        {
+        }
+    }
+
+    over "Geometry"
+    {
+        over "floor" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </tn__dynaTakuscene_nD9/Materials/floor>
+        }
+
+        over "agv_base_link"
+        {
+            over "agv_rear_buttons_visual" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_black>
+            }
+
+            over "agv_rear_connector_visual" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </tn__dynaTakuscene_nD9/Materials/connector_silver>
+            }
+
+            over "agv_lower_skirt_visual" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+            }
+
+            over "agv_rear_lidar_cover_visual" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_black>
+            }
+
+            over "agv_emergency_stop_cap_visual" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </tn__dynaTakuscene_nD9/Materials/emergency_stop_red>
+            }
+
+            over "agv_base_link_visual_1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_black>
+            }
+
+            over "agv_base_link_visual_2" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+            }
+
+            over "agv_base_link_visual_3" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+            }
+
+            over "agv_base_link_visual_4" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+            }
+
+            over "agv_base_link_visual_5" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+            }
+
+            over "agv_right_back_steering_link"
+            {
+                over "agv_right_back_steering_link_visual_1" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                }
+
+                over "agv_right_back_steering_link_visual_2" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                }
+
+                over "agv_right_back_steering_link_visual_3" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                }
+
+                over "agv_right_back_steering_link_visual_4" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                }
+
+                over "agv_right_back_wheel_link"
+                {
+                    over "agv_right_back_wheel_link_visual_1" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                    }
+
+                    over "agv_right_back_wheel_link_visual_2" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_black>
+                    }
+                }
+            }
+
+            over "agv_right_front_steering_link"
+            {
+                over "agv_right_front_steering_link_visual_1" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                }
+
+                over "agv_right_front_steering_link_visual_2" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                }
+
+                over "agv_right_front_steering_link_visual_3" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                }
+
+                over "agv_right_front_steering_link_visual_4" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                }
+
+                over "agv_right_front_wheel_link"
+                {
+                    over "agv_right_front_wheel_link_visual_1" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                    }
+
+                    over "agv_right_front_wheel_link_visual_2" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_black>
+                    }
+                }
+            }
+
+            over "agv_left_front_steering_link"
+            {
+                over "agv_left_front_steering_link_visual_1" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                }
+
+                over "agv_left_front_steering_link_visual_2" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                }
+
+                over "agv_left_front_steering_link_visual_3" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                }
+
+                over "agv_left_front_steering_link_visual_4" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                }
+
+                over "agv_left_front_wheel_link"
+                {
+                    over "agv_left_front_wheel_link_visual_1" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                    }
+
+                    over "agv_left_front_wheel_link_visual_2" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_black>
+                    }
+                }
+            }
+
+            over "agv_left_back_steering_link"
+            {
+                over "agv_left_back_steering_link_visual_1" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                }
+
+                over "agv_left_back_steering_link_visual_2" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                }
+
+                over "agv_left_back_steering_link_visual_3" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                }
+
+                over "agv_left_back_steering_link_visual_4" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                }
+
+                over "agv_left_back_wheel_link"
+                {
+                    over "agv_left_back_wheel_link_visual_1" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                    }
+
+                    over "agv_left_back_wheel_link_visual_2" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_black>
+                    }
+                }
+            }
+
+            over "folding_lower_joint_link"
+            {
+                over "folding_lower_joint_link_visual_1" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                }
+
+                over "folding_lower_joint_link_visual_2" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                }
+
+                over "folding_to_waist_link"
+                {
+                    over "folding_to_waist_link_visual_1" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                    }
+
+                    over "folding_to_waist_link_visual_2" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                    }
+
+                    over "folding_to_waist_link_visual_3" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                    }
+
+                    over "folding_to_waist_link_visual_4" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                    }
+
+                    over "torso_waist_pitch_link"
+                    {
+                        over "torso_waist_pitch_link_visual_1" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                        }
+
+                        over "torso_waist_pitch_link_visual_2" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                        }
+
+                        over "torso_waist_pitch_link_visual_3" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                        }
+
+                        over "torso_waist_pitch_link_visual_4" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                        }
+
+                        over "torso_body_link"
+                        {
+                            over "torso_body_link_visual_1" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                            }
+
+                            over "torso_body_link_visual_2" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                            }
+
+                            over "torso_body_link_visual_3" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                            }
+
+                            over "torso_body_link_visual_4" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                            }
+
+                            over "torso_body_link_visual_5" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                            }
+
+                            over "torso_body_link_visual_6" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                            }
+
+                            over "torso_body_link_logo_visual" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/chest_logo>
+                            }
+
+                            over "head_yaw_link"
+                            {
+                                over "head_pitch_link"
+                                {
+                                    over "head_roll_link"
+                                    {
+                                        over "head_roll_link_visual_1" (
+                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                        )
+                                        {
+                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/head_warm>
+                                        }
+
+                                        over "head_roll_link_visual_2" (
+                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                        )
+                                        {
+                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/head_warm>
+                                        }
+
+                                        over "head_roll_link_visual_3" (
+                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                        )
+                                        {
+                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_black>
+                                        }
+                                    }
+                                }
+                            }
+
+                            over "right_shoulder_pitch_link"
+                            {
+                                over "right_shoulder_pitch_link_visual_1" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                }
+
+                                over "right_shoulder_pitch_link_visual_2" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                }
+
+                                over "right_shoulder_pitch_link_visual_3" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                }
+
+                                over "right_shoulder_roll_link"
+                                {
+                                    over "right_shoulder_roll_link_visual_1" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                    }
+
+                                    over "right_shoulder_roll_link_visual_2" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                    }
+
+                                    over "right_shoulder_yaw_link"
+                                    {
+                                        over "right_shoulder_yaw_link_visual_1" (
+                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                        )
+                                        {
+                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/upper_arm_gray>
+                                        }
+
+                                        over "right_shoulder_yaw_link_visual_2" (
+                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                        )
+                                        {
+                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                        }
+
+                                        over "right_shoulder_yaw_link_visual_3" (
+                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                        )
+                                        {
+                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                                        }
+
+                                        over "right_shoulder_yaw_link_visual_4" (
+                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                        )
+                                        {
+                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                        }
+
+                                        over "right_elbow_link"
+                                        {
+                                            over "right_elbow_link_visual_1" (
+                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                            )
+                                            {
+                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                            }
+
+                                            over "right_elbow_link_visual_2" (
+                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                            )
+                                            {
+                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                                            }
+
+                                            over "right_elbow_link_visual_3" (
+                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                            )
+                                            {
+                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                            }
+
+                                            over "right_elbow_link_visual_4" (
+                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                            )
+                                            {
+                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                                            }
+
+                                            over "right_wrist_yaw_link"
+                                            {
+                                                over "right_wrist_yaw_link_visual_1" (
+                                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                                )
+                                                {
+                                                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                                                }
+
+                                                over "right_wrist_yaw_link_visual_2" (
+                                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                                )
+                                                {
+                                                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                                }
+
+                                                over "right_wrist_yaw_link_visual_3" (
+                                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                                )
+                                                {
+                                                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                                }
+
+                                                over "right_wrist_yaw_link_visual_4" (
+                                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                                )
+                                                {
+                                                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                                }
+
+                                                over "right_wrist_pitch_link"
+                                                {
+                                                    over "right_wrist_pitch_link_visual_1" (
+                                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                                    )
+                                                    {
+                                                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                                                    }
+
+                                                    over "right_wrist_pitch_link_visual_2" (
+                                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                                    )
+                                                    {
+                                                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                                    }
+
+                                                    over "right_wrist_roll_link"
+                                                    {
+                                                        over "right_wrist_roll_link_visual_1" (
+                                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                                        )
+                                                        {
+                                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                                        }
+
+                                                        over "right_wrist_roll_link_visual_2" (
+                                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                                        )
+                                                        {
+                                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                                        }
+
+                                                        over "right_wrist_roll_link_visual_3" (
+                                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                                        )
+                                                        {
+                                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                                        }
+
+                                                        over "right_wrist_roll_link_visual_4" (
+                                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                                        )
+                                                        {
+                                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                                        }
+
+                                                        over "right_wrist_roll_link_visual_5" (
+                                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                                        )
+                                                        {
+                                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                                                        }
+
+                                                        over "right_gripper_front_link"
+                                                        {
+                                                            over "right_gripper_front_link_visual_1" (
+                                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                                            )
+                                                            {
+                                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/dynaclaw_green>
+                                                            }
+
+                                                            over "right_gripper_front_link_visual_2" (
+                                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                                            )
+                                                            {
+                                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/dynaclaw_black>
+                                                            }
+
+                                                            over "right_gripper_front_nail_visual" (
+                                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                                            )
+                                                            {
+                                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/dynaclaw_aluminum>
+                                                            }
+                                                        }
+
+                                                        over "right_gripper_rear_link"
+                                                        {
+                                                            over "right_gripper_rear_link_visual_1" (
+                                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                                            )
+                                                            {
+                                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/dynaclaw_green>
+                                                            }
+
+                                                            over "right_gripper_rear_link_visual_2" (
+                                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                                            )
+                                                            {
+                                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/dynaclaw_black>
+                                                            }
+
+                                                            over "right_gripper_rear_nail_visual" (
+                                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                                            )
+                                                            {
+                                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/dynaclaw_aluminum>
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            over "left_shoulder_pitch_link"
+                            {
+                                over "left_shoulder_pitch_link_visual_1" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                }
+
+                                over "left_shoulder_pitch_link_visual_2" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                }
+
+                                over "left_shoulder_pitch_link_visual_3" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                }
+
+                                over "left_shoulder_roll_link"
+                                {
+                                    over "left_shoulder_roll_link_visual_1" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                    }
+
+                                    over "left_shoulder_roll_link_visual_2" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                    }
+
+                                    over "left_shoulder_yaw_link"
+                                    {
+                                        over "left_shoulder_yaw_link_visual_1" (
+                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                        )
+                                        {
+                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/upper_arm_gray>
+                                        }
+
+                                        over "left_shoulder_yaw_link_visual_2" (
+                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                        )
+                                        {
+                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                        }
+
+                                        over "left_shoulder_yaw_link_visual_3" (
+                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                        )
+                                        {
+                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                                        }
+
+                                        over "left_shoulder_yaw_link_visual_4" (
+                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                        )
+                                        {
+                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                        }
+
+                                        over "left_elbow_link"
+                                        {
+                                            over "left_elbow_link_visual_1" (
+                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                            )
+                                            {
+                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                            }
+
+                                            over "left_elbow_link_visual_2" (
+                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                            )
+                                            {
+                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                                            }
+
+                                            over "left_elbow_link_visual_3" (
+                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                            )
+                                            {
+                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                            }
+
+                                            over "left_elbow_link_visual_4" (
+                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                            )
+                                            {
+                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                                            }
+
+                                            over "left_wrist_yaw_link"
+                                            {
+                                                over "left_wrist_yaw_link_visual_1" (
+                                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                                )
+                                                {
+                                                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                                                }
+
+                                                over "left_wrist_yaw_link_visual_2" (
+                                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                                )
+                                                {
+                                                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                                }
+
+                                                over "left_wrist_yaw_link_visual_3" (
+                                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                                )
+                                                {
+                                                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                                }
+
+                                                over "left_wrist_yaw_link_visual_4" (
+                                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                                )
+                                                {
+                                                    rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                                }
+
+                                                over "left_wrist_pitch_link"
+                                                {
+                                                    over "left_wrist_pitch_link_visual_1" (
+                                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                                    )
+                                                    {
+                                                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_gray>
+                                                    }
+
+                                                    over "left_wrist_pitch_link_visual_2" (
+                                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                                    )
+                                                    {
+                                                        rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                                    }
+
+                                                    over "left_wrist_roll_link"
+                                                    {
+                                                        over "left_wrist_roll_link_visual_1" (
+                                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                                        )
+                                                        {
+                                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                                        }
+
+                                                        over "left_wrist_roll_link_visual_2" (
+                                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                                        )
+                                                        {
+                                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                                        }
+
+                                                        over "left_wrist_roll_link_visual_3" (
+                                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                                        )
+                                                        {
+                                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                                        }
+
+                                                        over "left_wrist_roll_link_visual_4" (
+                                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                                        )
+                                                        {
+                                                            rel material:binding = </tn__dynaTakuscene_nD9/Materials/photo_white>
+                                                        }
+
+                                                        over "left_gripper_front_link"
+                                                        {
+                                                            over "left_gripper_front_link_visual_1" (
+                                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                                            )
+                                                            {
+                                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/dynaclaw_green>
+                                                            }
+
+                                                            over "left_gripper_front_link_visual_2" (
+                                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                                            )
+                                                            {
+                                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/dynaclaw_black>
+                                                            }
+
+                                                            over "left_gripper_front_nail_visual" (
+                                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                                            )
+                                                            {
+                                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/dynaclaw_aluminum>
+                                                            }
+                                                        }
+
+                                                        over "left_gripper_rear_link"
+                                                        {
+                                                            over "left_gripper_rear_link_visual_1" (
+                                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                                            )
+                                                            {
+                                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/dynaclaw_green>
+                                                            }
+
+                                                            over "left_gripper_rear_link_visual_2" (
+                                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                                            )
+                                                            {
+                                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/dynaclaw_black>
+                                                            }
+
+                                                            over "left_gripper_rear_nail_visual" (
+                                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                                            )
+                                                            {
+                                                                rel material:binding = </tn__dynaTakuscene_nD9/Materials/dynaclaw_aluminum>
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

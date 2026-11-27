@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/dyna-robotics/dyna_robot_description",
+  "source_commit": "ccd4f132fcbd740433713bb23b12f3023acf5615",
+  "converter": "mujoco-usd-converter==0.10.0",
+  "date": "2026-11-27"
+}

@@ -1,0 +1,33 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "MuJoCo USD Converter v0.10.0"
+    }
+    defaultPrim = "tn__dynaTakuscene_nD9"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "tn__dynaTakuscene_nD9" (
+    prepend apiSchemas = ["GeomModelAPI"]
+    assetInfo = {
+        string name = "dyna Taku scene"
+    }
+    displayName = "dyna Taku scene"
+    kind = "component"
+    prepend payload = @./Payload/Contents.usda@
+    uiHints = {
+        string displayName = "dyna Taku scene"
+    }
+)
+{
+    float3[] extentsHint = [(-10, -10, 0), (10, 10, 1.3646686), (3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (-0.41, -0.30171758, 0), (0.3675298, 0.30169672, 1.3646687)]
+}
+
+def PhysicsScene "PhysicsScene" (
+    prepend payload = @./Payload/Contents.usda@</PhysicsScene>
+)
+{
+}
+
