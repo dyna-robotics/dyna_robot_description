@@ -1,0 +1,553 @@
+#usda 1.0
+(
+    defaultPrim = "tn__dynaTakuscene_nD9"
+    metersPerUnit = 1
+    subLayers = [
+        @layers/collision_hulls.usda@,
+        @layers/base.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "tn__dynaTakuscene_nD9"
+{
+    over "Geometry"
+    {
+        over "floor"
+        {
+            rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+        }
+
+        over "agv_base_link"
+        {
+            double[] newton:inertia = None
+
+            over "agv_base_rear_collision"
+            {
+                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+            }
+
+            over "agv_base_left_collision"
+            {
+                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+            }
+
+            over "agv_base_right_collision"
+            {
+                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+            }
+
+            over "agv_base_lidar_collision"
+            {
+                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+            }
+
+            over "agv_right_back_steering_link"
+            {
+                double[] newton:inertia = None
+
+                over "agv_right_back_wheel_link"
+                {
+                    double[] newton:inertia = None
+
+                    over "agv_right_back_wheel_link_collision_1"
+                    {
+                        custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_1>
+                    }
+                }
+            }
+
+            over "agv_right_front_steering_link"
+            {
+                double[] newton:inertia = None
+
+                over "agv_right_front_wheel_link"
+                {
+                    double[] newton:inertia = None
+
+                    over "agv_right_front_wheel_link_collision_1"
+                    {
+                        custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_1>
+                    }
+                }
+            }
+
+            over "agv_left_front_steering_link"
+            {
+                double[] newton:inertia = None
+
+                over "agv_left_front_wheel_link"
+                {
+                    double[] newton:inertia = None
+
+                    over "agv_left_front_wheel_link_collision_1"
+                    {
+                        custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_1>
+                    }
+                }
+            }
+
+            over "agv_left_back_steering_link"
+            {
+                double[] newton:inertia = None
+
+                over "agv_left_back_wheel_link"
+                {
+                    double[] newton:inertia = None
+
+                    over "agv_left_back_wheel_link_collision_1"
+                    {
+                        custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_1>
+                    }
+                }
+            }
+
+            over "folding_lower_joint_link"
+            {
+                double[] newton:inertia = None
+
+                over "folding_lower_joint_link_collision_1"
+                {
+                    custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                }
+
+                over "folding_to_waist_link"
+                {
+                    double[] newton:inertia = None
+
+                    over "folding_to_waist_link_collision_1"
+                    {
+                        custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                    }
+
+                    over "torso_waist_pitch_link"
+                    {
+                        double[] newton:inertia = None
+
+                        over "torso_waist_pitch_link_collision_1"
+                        {
+                            custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                        }
+
+                        over "torso_body_link"
+                        {
+                            double[] newton:inertia = None
+
+                            over "torso_body_link_collision_1"
+                            {
+                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                            }
+
+                            over "head_yaw_link"
+                            {
+                                double[] newton:inertia = None
+
+                                over "head_pitch_link"
+                                {
+                                    double[] newton:inertia = None
+
+                                    over "head_roll_link"
+                                    {
+                                        double[] newton:inertia = None
+
+                                        over "head_roll_link_collision_1"
+                                        {
+                                            custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                        }
+                                    }
+                                }
+                            }
+
+                            over "right_shoulder_pitch_link"
+                            {
+                                double[] newton:inertia = None
+
+                                over "right_shoulder_pitch_link_collision_1"
+                                {
+                                    custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                }
+
+                                over "right_shoulder_roll_link"
+                                {
+                                    double[] newton:inertia = None
+
+                                    over "right_shoulder_roll_link_collision_1"
+                                    {
+                                        custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                    }
+
+                                    over "right_shoulder_yaw_link"
+                                    {
+                                        double[] newton:inertia = None
+
+                                        over "right_shoulder_yaw_link_collision_1"
+                                        {
+                                            custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                        }
+
+                                        over "right_elbow_link"
+                                        {
+                                            double[] newton:inertia = None
+
+                                            over "right_elbow_link_collision_1"
+                                            {
+                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                            }
+
+                                            over "right_wrist_yaw_link"
+                                            {
+                                                double[] newton:inertia = None
+
+                                                over "right_wrist_yaw_link_collision_1"
+                                                {
+                                                    custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                                }
+
+                                                over "right_wrist_pitch_link"
+                                                {
+                                                    double[] newton:inertia = None
+
+                                                    over "right_wrist_pitch_link_collision_1"
+                                                    {
+                                                        custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                                    }
+
+                                                    over "right_wrist_roll_link"
+                                                    {
+                                                        double[] newton:inertia = None
+
+                                                        over "right_wrist_roll_link_collision_1"
+                                                        {
+                                                            custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                                        }
+
+                                                        over "right_wrist_roll_link_collision_2"
+                                                        {
+                                                            custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                                        }
+
+                                                        over "right_gripper_front_link"
+                                                        {
+                                                            double[] newton:inertia = None
+
+                                                            over "right_gripper_front_collision_inner_pad"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "right_gripper_front_collision_outer_back"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "right_gripper_front_collision_taper"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "right_gripper_front_collision_relief_1"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "right_gripper_front_collision_relief_2"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "right_gripper_front_collision_relief_3"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "right_gripper_front_collision_relief_4"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "right_gripper_front_collision_tip_support"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "right_gripper_front_collision_nail"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_3>
+                                                            }
+
+                                                            over "right_gripper_front_collision_nail_tip"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_4>
+                                                            }
+                                                        }
+
+                                                        over "right_gripper_rear_link"
+                                                        {
+                                                            double[] newton:inertia = None
+
+                                                            over "right_gripper_rear_collision_inner_pad"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "right_gripper_rear_collision_outer_back"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "right_gripper_rear_collision_taper"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "right_gripper_rear_collision_relief_1"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "right_gripper_rear_collision_relief_2"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "right_gripper_rear_collision_relief_3"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "right_gripper_rear_collision_relief_4"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "right_gripper_rear_collision_tip_support"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "right_gripper_rear_collision_nail"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_5>
+                                                            }
+
+                                                            over "right_gripper_rear_collision_nail_tip"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_6>
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            over "left_shoulder_pitch_link"
+                            {
+                                double[] newton:inertia = None
+
+                                over "left_shoulder_pitch_link_collision_1"
+                                {
+                                    custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                }
+
+                                over "left_shoulder_roll_link"
+                                {
+                                    double[] newton:inertia = None
+
+                                    over "left_shoulder_roll_link_collision_1"
+                                    {
+                                        custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                    }
+
+                                    over "left_shoulder_yaw_link"
+                                    {
+                                        double[] newton:inertia = None
+
+                                        over "left_shoulder_yaw_link_collision_1"
+                                        {
+                                            custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                        }
+
+                                        over "left_elbow_link"
+                                        {
+                                            double[] newton:inertia = None
+
+                                            over "left_elbow_link_collision_1"
+                                            {
+                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                            }
+
+                                            over "left_wrist_yaw_link"
+                                            {
+                                                double[] newton:inertia = None
+
+                                                over "left_wrist_yaw_link_collision_1"
+                                                {
+                                                    custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                                }
+
+                                                over "left_wrist_pitch_link"
+                                                {
+                                                    double[] newton:inertia = None
+
+                                                    over "left_wrist_pitch_link_collision_1"
+                                                    {
+                                                        custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                                    }
+
+                                                    over "left_wrist_roll_link"
+                                                    {
+                                                        double[] newton:inertia = None
+
+                                                        over "left_wrist_roll_link_collision_1"
+                                                        {
+                                                            custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                                        }
+
+                                                        over "left_wrist_roll_link_collision_2"
+                                                        {
+                                                            custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial>
+                                                        }
+
+                                                        over "left_gripper_front_link"
+                                                        {
+                                                            double[] newton:inertia = None
+
+                                                            over "left_gripper_front_collision_inner_pad"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "left_gripper_front_collision_outer_back"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "left_gripper_front_collision_taper"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "left_gripper_front_collision_relief_1"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "left_gripper_front_collision_relief_2"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "left_gripper_front_collision_relief_3"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "left_gripper_front_collision_relief_4"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "left_gripper_front_collision_tip_support"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "left_gripper_front_collision_nail"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_7>
+                                                            }
+
+                                                            over "left_gripper_front_collision_nail_tip"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_8>
+                                                            }
+                                                        }
+
+                                                        over "left_gripper_rear_link"
+                                                        {
+                                                            double[] newton:inertia = None
+
+                                                            over "left_gripper_rear_collision_inner_pad"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "left_gripper_rear_collision_outer_back"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "left_gripper_rear_collision_taper"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "left_gripper_rear_collision_relief_1"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "left_gripper_rear_collision_relief_2"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "left_gripper_rear_collision_relief_3"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "left_gripper_rear_collision_relief_4"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "left_gripper_rear_collision_tip_support"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_2>
+                                                            }
+
+                                                            over "left_gripper_rear_collision_nail"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_9>
+                                                            }
+
+                                                            over "left_gripper_rear_collision_nail_tip"
+                                                            {
+                                                                custom rel material:binding = </tn__dynaTakuscene_nD9/Physics/PhysicsMaterial_10>
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    def "Keyframes"
+    {
+        def MjcKeyframe "home"
+        {
+            double[] mjc:ctrl = [0, 0, 0, 0, 0, 0, 0, 0, 0.24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            double[] mjc:qpos = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            double[] mjc:qvel = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        }
+    }
+}
+
+over "PhysicsScene"
+{
+    uniform double mjc:option:timestep = 0.001
+    uniform int newton:timeStepsPerSecond = 1000
+}
+

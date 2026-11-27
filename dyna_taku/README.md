@@ -21,6 +21,13 @@ grippers. Its generated files in `gripper/` are included by `taku.xml`.
 
 Open `scene.xml` in MuJoCo; `taku.xml` contains the robot model and `home` keyframe.
 
+## Isaac Sim / USD
+
+An [additional USD model](usd/README.md) is available for **Isaac Sim 6.2 with
+Newton and its MuJoCo Warp solver**. It includes a dedicated hero image, startup
+script and [MuJoCo/Isaac validation report](usd/validation/README.md).
+Use the documented Newton configuration; PhysX has not been validated.
+
 ## License
 
 Copyright (c) 2026 dyna robotics.

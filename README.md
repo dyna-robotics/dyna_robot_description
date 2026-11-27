@@ -19,6 +19,9 @@ Open `dyna_taku/scene.xml` in MuJoCo:
 python -m mujoco.viewer --mjcf dyna_taku/scene.xml
 ```
 
+The [Taku USD package](dyna_taku/usd/README.md) targets Isaac Sim with Newton /
+MuJoCo Warp, with reproducible dynamics and appearance comparisons.
+
 ## License
 
 Copyright (c) 2026 dyna robotics.
